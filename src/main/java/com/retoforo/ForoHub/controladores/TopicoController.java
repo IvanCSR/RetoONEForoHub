@@ -18,6 +18,9 @@ public class TopicoController {
     @Autowired
     private TopicoRepositorio topicoRepositorio;
 
+    @Autowired
+    private TopicoServicio topicoServicio;
+
     //Listado de topicos
     @GetMapping
     public ResponseEntity<Page<DTODatosListadoTopico>> ListadoTopicos(
@@ -29,9 +32,9 @@ public class TopicoController {
     @Transactional
     public ResponseEntity<DTORespuestaTopico> registrarTopico(@RequestBody @Valid DTORegistrarTopico registrartopico,
                                                               UriComponentsBuilder uriComponentsBuilder) {
-        var topico=topicoRepositorio.save(new Topico(registrartopico));
-        var respuestaTopico=new DTORespuestaTopico(topico);
-        var uri=uriComponentsBuilder.path("/topicos/{id}").buildAndExpand(topico.getId()).toUri();
-        return ResponseEntity.created(uri).body(respuestaTopico);
+        var topico=topicoServicio.respuestaTopico(registrartopico);
+        //var respuestaTopico=new DTORespuestaTopico(topico);
+        var uri=uriComponentsBuilder.path("/topicos/{id}").buildAndExpand(topico.id()).toUri();
+        return ResponseEntity.created(uri).body(topico);
     }
 }
