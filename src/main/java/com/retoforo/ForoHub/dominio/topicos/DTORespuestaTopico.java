@@ -13,7 +13,7 @@ public record DTORespuestaTopico(
 
 ) {
     public DTORespuestaTopico(Topico topico) {
-        this(topico.getId(), topico.getTitulo(), topico.getMensaje(), topico.getFechacreacion(),
+        this(topico.getId(), topico.getTitulo(), topico.getMensaje(), topico.getFechaCreacion(),
                 topico.getStatus(), topico.getAutor(), topico.getCurso());
     }
 }

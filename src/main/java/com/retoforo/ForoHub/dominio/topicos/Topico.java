@@ -18,7 +18,7 @@ public class Topico {
     private Long id;
     private String titulo;
     private String mensaje;
-    private LocalDateTime fechacreacion;
+    private LocalDateTime fechaCreacion;
     @Enumerated(EnumType.ORDINAL)
     private Estados status;
     private String autor;
@@ -27,7 +27,7 @@ public class Topico {
     public Topico(DTORegistrarTopico  registroTopico) {
         this.titulo=registroTopico.titulo();
         this.mensaje=registroTopico.mensaje();
-        this.fechacreacion=LocalDateTime.now();
+        this.fechaCreacion=LocalDateTime.now();
         this.status=Estados.ABIERTO;
         this.autor=registroTopico.autor();
         this.curso=registroTopico.curso();
