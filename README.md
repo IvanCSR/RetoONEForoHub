@@ -48,4 +48,4 @@ Para el tema de las pruebas se uso el software de insomnia.
   ![eliminarTopicoError](https://github.com/user-attachments/assets/7df07587-9e04-406b-8e66-dd5e2536b14c)
 
 #
-**✒️Desarrollado por: IvanCSR - 2025**
+**✒️Desarrollado por: Ivan Chavez - 2025**
