@@ -12,7 +12,8 @@ Previo login por parte del usuario.
  * JWT
  * Spring Data JPA
  * Spring Doc
- * Java 21 
+ * Java 21
+   
 Para el tema de las pruebas se uso el software de insomnia.
 
 ## Pruebas de los endpoints
